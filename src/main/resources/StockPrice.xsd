@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://trng.soap.service/StockPrice"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://trng.soap.service/StockPrice">
+
+	<complexType name="StockPrice">
+		<sequence>
+			<element name="stockName" type="string"></element>
+			<element name="price" type="double" minOccurs="1"></element>
+		</sequence>
+	</complexType>
+
+	<element name="StockPrice" type="tns:StockPrice"></element>
+</schema>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://trng.soap.service/StockPrice/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StockPrice"
+	targetNamespace="http://trng.soap.service/StockPrice/" 
+	xmlns:xsd1="http://www.example.org/StockPriceRequest"
+	xmlns:xsd2="http://trng.soap.service/StockPriceResponse">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://trng.soap.service/StockPrice/">
+		</xsd:schema>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.example.org/StockPriceRequest"
+				schemaLocation="StockPriceRequest.xsd">
+			</xsd:import>
+			<xsd:import namespace="http://trng.soap.service/StockPriceResponse"
+				schemaLocation="StockPriceResponse.xsd">
+			</xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="getStockPriceRequest">
+		<wsdl:part element="xsd1:GetStockPriceRequest" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="getStockPriceResponse">
+		<wsdl:part element="xsd2:GetStockPriceResponse" name="parameters" />
+	</wsdl:message>
+	<wsdl:portType name="StockPrice">
+		<wsdl:operation name="getStockPrice">
+			<wsdl:input message="tns:getStockPriceRequest" />
+			<wsdl:output message="tns:getStockPriceResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="StockPriceSOAP" type="tns:StockPrice">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getStockPrice">
+			<soap:operation soapAction="http://trng.soap.service/StockPrice/getStockPrice" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="StockPrice">
+		<wsdl:port binding="tns:StockPriceSOAP" name="StockPriceSOAP">
+			<soap:address location="http://trng.soap.service/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

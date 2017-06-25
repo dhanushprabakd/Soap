@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://trng.soap.service/StockPriceResponse"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://trng.soap.service/StockPriceResponse" xmlns:pref="http://trng.soap.service/StockPrice">
+
+
+
+
+
+    <import schemaLocation="StockPrice.xsd" namespace="http://trng.soap.service/StockPrice"></import>
+
+    <complexType name="GetStockPriceResponse">
+    	<sequence>
+    		<element name="stockPrice" type="pref:StockPrice" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="GetStockPriceResponse" type="tns:GetStockPriceResponse"></element>
+</schema>

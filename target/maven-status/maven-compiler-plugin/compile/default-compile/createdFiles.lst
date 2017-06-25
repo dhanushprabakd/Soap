@@ -1,0 +1,17 @@
+trng\loan\eligibility\service\LoanEligibilityService.class
+trng\loan\eligibility\service\LoanEligibilityResponseType.class
+trng\loan\eligibility\service\ObjectFactory.class
+trng\loan\eligibility\service\GetLoanEligibility.class
+trng\soap\service\stock\StockPrice_Type.class
+trng\soap\service\stock\StockPrice_Service.class
+trng\soap\service\stock\StockPrice.class
+trng\loan\eligibility\service\package-info.class
+trng\soap\service\stock\StockPriceImpl.class
+trng\loan\eligibility\service\LoanEligibilityService_Service.class
+trng\soap\service\stock\ObjectFactory.class
+trng\soap\service\stock\GetStockPriceResponse.class
+trng\loan\eligibility\service\LoanEligibilityServiceImpl.class
+trng\loan\eligibility\service\LoanEligibilityRequestType.class
+trng\soap\service\stock\GetStockPriceRequest.class
+trng\soap\service\stock\package-info.class
+trng\loan\eligibility\service\GetLoanEligibilityResponse.class
